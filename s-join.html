@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2a11017e98.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <title>SITTER 회원가입</title>
+
+</head>
+
+<body>
+
+    <script>
+        function toggleLoginIcons(element) {
+            element.classList.toggle('login_active');
+        }
+    </script>
+
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-dog"></i>
+            <a href="">Pet</a>
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="reserve.html">예약</a></li>
+            <li><a href="sitter.html">PET SITTER</a></li>
+            <li><a href="place.html">주변 동반가능 장소</a></li>
+            <li><a href="comments.html">이용 후기</a></li>
+        </ul>
+
+        <div class="navbar_more">
+            <ul class="navbar_icons">
+                <li onclick="toggleLoginIcons(this)">
+                    <i class="fa-solid fa-user"></i>
+                    <ul class="login_icons">
+                        <li><a href="n-login.html">일반 로그인</a></li>
+                        <li><a href="s-login.html">SITTER 로그인</a></li>
+                        <li><a href="n-join.html">일반 회원가입</a></li>
+                        <li><a href="s-join.html">SITTER 회원가입</a></li>
+                    </ul>
+                </li>
+                <li onclick="toggleLoginIcons(this)">
+                    <i class="fa-solid fa-square-phone"></i>
+                    <ul class="call_icons">
+                        <li><a href="#">010-xxxx-xxxx</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="navbar_toggleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+
+    <div class="img">
+        <div class="reserve-bg">
+            <div class="text">SITTER 회원가입</div>
+            <div class="form">
+                <form>
+                    <dl>
+                        <dt>성함</dt>
+                        <dd><input type="text" placeholder="성함 입력"></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>아이디</dt>
+                        <dd><input type="text" placeholder="아이디 입력"></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>비밀번호</dt>
+                        <dd><input type="password" placeholder="비밀번호 입력"></dd>
+                    </dl>
+
+
+
+                    <dl>
+                        <dt>주소</dt>
+                        <dd><input type="button" value="주소찾기"></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>연락처</dt>
+                        <dd><input type="tel" placeholder="전화번호"></dd>
+                    </dl>
+
+
+                    <input type="submit" value="회원가입하기">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

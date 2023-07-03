@@ -1,0 +1,367 @@
+body { 
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263343;
+  padding: 8px 12px;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar_logo i {
+  color: #d49466;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar_menu li {
+  display: inline-block;
+  padding: 8px 100px;
+  font-weight: bold;
+}
+
+.navbar_menu li > a {
+  display: block;
+}
+
+.navbar_menu li:hover {
+  background-color: #d49466;
+  border-radius: 4px
+  
+}
+
+
+.navbar_icons {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0;
+}
+
+
+.navbar_icons li {
+  padding: 8px 12px;
+}
+
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+}
+@media screen and (max-width: 1572px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  
+
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .navbar_toggleBtn{
+    display: block;
+  }
+
+  
+
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+  
+  .text {
+    display: none;
+
+  }
+  
+}
+
+.navbar_more .login_icons,.call_icons {
+  display: none;
+}
+
+.navbar_more .navbar_icons > li.login_active > i {
+  color: #d49466;
+}
+
+.navbar_more .navbar_icons > li.login_active > .login_icons {
+  display: block;
+}
+
+.navbar_more .navbar_icons > li.login_active > .call_icons {
+  display: block;
+}
+
+.navbar_more .login_icons a:hover {
+  text-decoration: underline;
+}
+
+.navbar_more .call_icons a:hover {
+  text-decoration: underline;
+}
+
+
+.text {
+  display: flex;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  width: 100%;
+  transform: translate( 0%, 30%);
+  justify-content: center;
+  
+
+}
+
+.main-bg{
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2022/04/20/07/07/dogs-7144522_1280.jpg);
+  background-position: center bottom;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-color: bisque;
+}
+
+.reserve-bg{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-position: relative;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+}
+.reserve-bg::after{
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2017/04/06/10/38/dogs-2207923_1280.jpg);
+  background-position: center;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-color: bisque;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5
+}
+
+.sitter-bg{
+  width: 100%;
+  height: 100vh;
+  background-position: center bottom;
+  background-position: relative;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+}
+.sitter-bg::after{
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2017/12/22/17/15/dog-3033951_1280.jpg);
+  background-position: center bottom;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-color: bisque;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5
+}
+
+.place-bg{
+  width: 100%;
+  height: 100vh;
+  background-position: center bottom;
+  background-position: relative;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+}
+.place-bg::after{
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2015/09/16/15/50/dog-942870_1280.jpg);
+  background-position: center bottom;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-color: bisque;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5
+}
+
+.comments-bg{
+  width: 100%;
+  height: 100vh;
+  background-position: center bottom;
+  background-position: relative;
+  background-repeat: no-repeat;
+  z-index: 1;
+  position: relative;
+}
+.comments-bg::after{
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.pixabay.com/photo/2016/11/21/12/31/dogs-1845077_1280.jpg);
+  background-position: center bottom;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-color: bisque;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5
+}
+
+
+.form {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top:50px ;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="button"],
+.form input[type="tel"],
+.form textarea {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  margin: 10px auto
+}
+
+.form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #d49466;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sit {
+  display: inline-block;
+  position: relative;
+  margin-top: 100px;
+  padding-left: 18%;
+  padding-right: 18%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.sunchun {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d49466;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 800px;
+}
+
+.yeosu {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d49466;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 800px;
+  margin-left: 50px;
+}
+
+.gwangyang {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d49466;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 800px;
+  margin-left: 50px;
+}
+
+.link {
+  display: inline-block;
+  padding: 50px 50px;
+  background-color: #d49466;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 500px;
+  margin-left: 40px;
+}
