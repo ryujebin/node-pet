@@ -1,11 +1,19 @@
+:root{
+  --font-size-logo: 1.2vw;
+}
+
 body { 
   margin: 0;
 }
 
+
+
 a {
   text-decoration: none;
   color: white;
-}
+  text-size-adjust: auto;
+  font-size: var(--font-size-logo);
+} 
 
 ul, li {
   list-style: none;
@@ -20,7 +28,7 @@ ul, li {
 }
 
 .navbar_logo {
-  font-size: 24px;
+  
   color: white;
 }
 
@@ -32,6 +40,7 @@ ul, li {
   display: flex;
   list-style: none;
   padding: 0;
+  width: 100%;
 }
 
 .navbar_menu li {
@@ -67,10 +76,10 @@ ul, li {
   display: none;
   position: absolute;
   right: 32px;
-  font-size: 24px;
+  
   color: #d49466;
 }
-@media screen and (max-width: 1572px) {
+@media screen and (max-width: 1270px) {
 
   .navbar {
     flex-direction: column;
@@ -81,7 +90,7 @@ ul, li {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    
   }
 
   .navbar_menu li {
@@ -307,8 +316,9 @@ ul, li {
 .button {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; 
+  margin-top: 10%;
+  position: relative;
+  
 }
 
 .sunchun {
@@ -321,7 +331,8 @@ ul, li {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 800px;
+ 
+  
 }
 
 .yeosu {
@@ -334,9 +345,9 @@ ul, li {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 800px;
   margin-left: 50px;
 }
+
 
 .gwangyang {
   display: inline-block;
@@ -348,8 +359,9 @@ ul, li {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 800px;
   margin-left: 50px;
+  
+  
 }
 
 .link {
@@ -362,6 +374,5 @@ ul, li {
   font-size: 40px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 500px;
-  margin-left: 40px;
+  margin-left: 50px;
 }
