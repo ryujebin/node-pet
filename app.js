@@ -3,7 +3,23 @@ const app = express()
 const port = 3000
 app.use(express.static('public'));
 
-let comments = [];
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: 'database.sqlite'
+});
+
+const Comments = sequelize.define('Comments', {
+  content: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
+}, {
+});
+
+(async () => {
+await Comments.sync();
+})();
 
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
@@ -31,8 +47,10 @@ app.get('/place.html', (req, res) => {
   res.render('place.html')
 })
 
-app.get('/comments.html', (req, res) => {
-  res.render('comments.ejs', {comments : comments})
+app.get('/comments.html', async(req, res) => {
+  const comments = await Comments.findAll();
+
+  res.render('comments.ejs', {comments : comments});
 })
 
 app.get('/n-join.html', (req, res) => {
@@ -69,10 +87,33 @@ app.post('/create', async function(req, res) {
 
   const {content} = req.body
 
-  comments.push(content)
+  await Comments.create({ content: content });
 
-  console.log(comments);
+  res.redirect('/comments.html')
+});
 
+app.post('/update/:id', async function(req, res) {
+  console.log(req.params)
+  console.log(req.body)
+
+  const {content} = req.body
+  const {id} = req.params
+  await Comments.update({ content: content }, {
+    where: {
+      id: id
+    }
+  });
+
+  res.redirect('/comments.html')
+});
+
+app.post('/delete/:id', async function(req, res) {
+  const { id } = req.params
+  await Comments.destroy({
+    where: {
+      id: id
+    }
+  });
   res.redirect('/comments.html')
 });
 
